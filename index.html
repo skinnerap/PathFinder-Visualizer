@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Path Finder</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="info">
+        <h1 class="title">Path Finding Visualizer</h1>
+        <div class="algos">
+
+            <div class="inline-item btn">
+                <button class="reset border">Reset</button>
+            </div>
+
+            <div class="inline-item btn">
+                <button class="aStar border">A Star</button>
+            </div>
+
+
+        </div>
+
+
+        <div class="div-row">
+
+            <div class="inline-item noborder">
+                <input type="radio" id="start" name="node-choice" value="applyStart">
+                <div class="inline-item display-item-start white">Start</div>
+            </div>
+
+            <div class='inline-item noborder'>
+                <input type="radio" id="end" name="node-choice" value="applyEnd">
+                <div class="inline-item display-item-end white">End</div>
+            </div>
+
+            <div class="inline-item noborder">
+                <input type="radio" id="barrier" name="node-choice" value="applyBarrier">
+                <div class="inline-item display-item-barrier white">Wall</div>
+            </div>
+
+            <div class="inline-item display-item-evaluated black">
+                Evaluated
+            </div>
+
+            <div class="inline-item display-item-path black">
+                Path
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+    <div class="con">
+        <!-- Stores Visualization -->
+    </div>
+
+
+</div>
+
+<script src="createGrid.js"></script>
+<script src="createNodes.js"></script>
+<script src="aStar.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
