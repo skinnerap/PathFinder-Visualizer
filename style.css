@@ -36,26 +36,21 @@ html {
 body {
     font-family: 'Open Sans Condensed', sans-serif;
     color: #fffcdc;
-    backdrop-filter: blur(5px);
-    min-height: 100vw;
+    /*min-height: 100vw;*/
 }
 
 h1 {
-    font-size: 125%;
+    font-size: 160%;
 }
 
 h2, h3 {
     font-size: 110%;
 }
 
-header {
-    background: #d9a7c7;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #fffcdc, #d9a7c7);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #fffcdc, #d9a7c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
+
 
 .container {
-
+    backdrop-filter: blur(5px);
 
 }
 
@@ -64,7 +59,7 @@ header {
 /************************/
 
 .div-row {
-    width: 100%;
+    width: 70%;
     margin-left: 30%;
 }
 
@@ -80,7 +75,7 @@ header {
 }
 
 .title {
-    margin-left: 30%;
+    margin-left: 40%;
     margin-bottom: 1%;
     margin-top: 1%;
 }
@@ -134,8 +129,8 @@ button:focus, button:active {
 }
 
 .con {
-    display: block;
-    margin-left: 30%;
+    display: unset;
+    /*margin-left: 30%;*/
 }
 
 .block {
@@ -183,7 +178,7 @@ button:focus, button:active {
 
 @media only screen and (max-width: 360px) {
     .con, .title, .div-row, .info, .algos {
-        margin-left: 10%;
+        margin-left: 5%;
     }
 
     .row {

@@ -55,12 +55,14 @@ function createGrid( rows, cols ) {
     con.style.maxWidth = '80%';
 
     // Get height and width for each block on the DOM
-    let width = con.clientWidth / cols;
-    let height = window.innerHeight / rows;
+    //let width = con.clientWidth / cols;
+    //let height = window.innerHeight / rows;
+    let width, height;
+    width = height = 25.6;
 
     if(window.innerHeight > window.innerWidth) {
 
-        height = height / 2;
+        //height = height / 2;
 
     }
 
