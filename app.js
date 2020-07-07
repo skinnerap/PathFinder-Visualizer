@@ -1,5 +1,15 @@
-r = 50;
-c = 50;
+// Get User Heuristic Function Choice First
+let hChoice = 'manhattanDistance';
+let hChoices = document.getElementsByName('h-choice');
+for( let c of hChoices ) {
+
+    c.addEventListener('click', () => {
+        hChoice = c.value;
+    });
+
+}
+let r = 50;
+let c = 50;
 
 let styleAccessBlock = document.querySelectorAll('.block');
 let styleAccessRow = document.getElementsByClassName('row');
@@ -26,7 +36,6 @@ createGrid(r, c);
 if(w > 567 && w < 760 && h < 420 && h > 319) {
     // fix
     for(let elt of styleAccessBlock) {
-        console.log(elt);
         elt.style.maxHeight = '2vw';
         elt.style.maxWidth = '2vw';
     }
@@ -124,6 +133,18 @@ divs.forEach(div => {
     });
 });
 
-console.log(r);
-console.log(c);
+const aStarBtn = document.querySelector('.aStar');
+aStarBtn.addEventListener('click', () => {
+    aStar();
+});
+
+const dijkBtn = document.querySelector('.dijkstra');
+dijkBtn.addEventListener("click", () => {
+    dijkstra();
+});
+
+const bfsBtn = document.querySelector('.bfs');
+bfsBtn.addEventListener('click', () => {
+    bfs();
+});
 

@@ -1,8 +1,15 @@
+/*************************************************/
+/*          Global Data Structures               */
+/*************************************************/
+
 // Global data structure to store all blocks on the grid
 let grid = [];
 let path = [];
 
-// Block Constructor
+/*************************************************/
+/*          Block Constructor                    */
+/*************************************************/
+
 function Block( row, col, f, g, h) {
 
     this.row = row;
@@ -46,6 +53,9 @@ function Block( row, col, f, g, h) {
 
 }
 
+/*************************************************/
+/*          Grid Generator                       */
+/*************************************************/
 // Creates a Grid of Blocks
 function createGrid( rows, cols ) {
 
@@ -111,6 +121,10 @@ function createGrid( rows, cols ) {
 
 }
 
+/*************************************************/
+/*       Asynchronous Functions                  */
+/*************************************************/
+
 // Sleep function to slow down algorithms and show visualization
 function sleep( timeout ) {
 
@@ -130,5 +144,62 @@ async function setEvaluatedStyle( el ) {
 
     await sleep(10);
     document.getElementById(el.id).classList.add('evaluated');
+
+}
+
+/*************************************************/
+/*          Accessory Functions                  */
+/*************************************************/
+
+function removeFromArray( arr, el ) {
+
+    for( let i = arr.length - 1; i >= 0; i-- ) {
+
+        if(  arr[i] === el ) {
+
+            arr.splice( i, 1 );
+
+        }
+
+    }
+
+}
+
+/*************************************************/
+/*          Heuristic Functions                  */
+/*************************************************/
+
+function euclideanDistance( a, b ) {
+
+    let x = Math.pow((a.row - b.row), 2);
+    let y = Math.pow((a.col - b.col), 2);
+    let z = x + y;
+    return Math.sqrt( z );
+
+}
+
+function manhattanDistance( a, b ) {
+
+    let x = Math.abs(a.row - b.row);
+    let y = Math.abs(a.col - b.col);
+    return x + y;
+
+}
+
+function chebyshevDistance( a, b ) {
+
+    let x = Math.abs(a.row - b.row);
+    let y = Math.abs(a.col - b.col);
+    return Math.max( x, y );
+
+}
+
+function octileDistance ( a, b ) {
+
+    let x = Math.abs(a.row - b.row);
+    let y = Math.abs(a.col - b.col);
+    let z = Math.min( x, y );
+    let z2 = Math.abs(x - y );
+    return z + z2;
 
 }

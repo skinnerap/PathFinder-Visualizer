@@ -16,14 +16,37 @@
         <h1 class="title">Path Finding Visualizer</h1>
         <div class="algos">
 
-            <div class="inline-item btn">
-                <button class="reset border">Reset</button>
+            <div class="inline-item">
+                <button class="reset btn"><span>Reset</span></button>
             </div>
 
-            <div class="inline-item btn">
-                <button class="aStar border">A Star</button>
+            <div class="dropdown">
+                <button class="heuristic dropbtn">Heuristic</button>
+                <div class="dropdown-content">
+
+                    <input type="radio" id="manhat" name="h-choice" value="manhattanDistance" checked="checked">
+                    <label for="manhat">Manhattan</label><br>
+                    <input type="radio" id="euclid" name="h-choice" value="euclideanDistance">
+                    <label for="euclid">Euclidean</label><br>
+                    <input type="radio" id="cheby" name="h-choice" value="chebyshevDistance">
+                    <label for="cheby">Chebyshev</label><br>
+                    <input type="radio" id="octile" name="h-choice" value="octileDistance">
+                    <label for="octile">Octile</label>
+
+                </div>
             </div>
 
+            <div class="inline-item">
+                <button class="aStar btn"><span>A Star</span></button>
+            </div>
+
+            <div class="inline-item">
+                <button class="bfs btn"><span>Best First Search</span></button>
+            </div>
+
+            <div class="inline-item">
+                <button class="dijkstra btn"><span>Dijkstra's</span></button>
+            </div>
 
         </div>
 
@@ -68,7 +91,10 @@
 
 <script src="createGrid.js"></script>
 <script src="createNodes.js"></script>
+<script src="dijkstra.js"></script>
+<script src="bestFirstSearch.js"></script>
 <script src="aStar.js"></script>
+
 <script src="app.js"></script>
 
 </body>

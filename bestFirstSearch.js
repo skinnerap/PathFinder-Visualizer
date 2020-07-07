@@ -1,4 +1,4 @@
-async function aStar() {
+async function bfs() {
 
     if( startNode === null || endNode === null ) {
         throw "Define a start and end node first...";
@@ -111,7 +111,7 @@ async function aStar() {
 
                 }
 
-                neighbor.f = neighbor.g + neighbor.h;
+                neighbor.f = neighbor.h;
                 neighbor.previous = current;
 
             }

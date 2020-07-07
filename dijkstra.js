@@ -1,4 +1,4 @@
-async function aStar() {
+async function dijkstra() {
 
     if( startNode === null || endNode === null ) {
         throw "Define a start and end node first...";
@@ -90,28 +90,7 @@ async function aStar() {
 
                 }
 
-
-                console.log(hChoice);
-
-                if( hChoice === 'manhattanDistance' ) {
-
-                    neighbor.h = manhattanDistance( neighbor, endNode );
-
-                } else if( hChoice === 'euclideanDistance' ) {
-
-                    neighbor.h = euclideanDistance( neighbor, endNode );
-
-                } else if( hChoice === 'chebyshevDistance' ) {
-
-                    neighbor.h = chebyshevDistance( neighbor, endNode );
-
-                } else if( hChoice === 'octileDistance' ) {
-
-                    neighbor.h = octileDistance( neighbor, endNode );
-
-                }
-
-                neighbor.f = neighbor.g + neighbor.h;
+                neighbor.f = neighbor.g;
                 neighbor.previous = current;
 
             }
