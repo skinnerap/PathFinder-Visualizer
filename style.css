@@ -58,9 +58,6 @@ h2, h3 {
 
 .info {
     background: #314755;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #26a0da, #314755, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #26a0da, #314755, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
 }
 
 .div-row {
@@ -80,9 +77,11 @@ h2, h3 {
 }
 
 .title {
-    margin-left: 40%;
-    margin-top: 1%;
-    margin-bottom: 1%;
+    text-align: center;
+    padding: 3vh;
+    /* text-transform: uppercase; */
+    font-variant: petite-caps;
+    letter-spacing: .2rem;
 }
 
 .white {
@@ -232,16 +231,18 @@ h2, h3 {
 .row {
     width: 100%;
     max-height: 2vw;
+    display: grid;
+    grid-auto-flow: column;
 }
 
 .con {
-    display: unset;
-    /*margin-left: 30%;*/
+    position: absolute;
+    width: 100%;
 }
 
 .block {
     border: 1px solid rgba(0, 0, 255, 0.37);
-    display: inline-block;
+    display: inline-table;
     background: rgba(0, 0, 0, 0.053);
     max-height: 2vw;
     max-width: 2vw;

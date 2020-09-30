@@ -62,20 +62,6 @@ function createGrid( rows, cols ) {
     let html = '';
     const con = document.querySelector('.con');
 
-    con.style.maxWidth = '80%';
-
-    // Get height and width for each block on the DOM
-    //let width = con.clientWidth / cols;
-    //let height = window.innerHeight / rows;
-    let width, height;
-    width = height = 25.6;
-
-    if(window.innerHeight > window.innerWidth) {
-
-        //height = height / 2;
-
-    }
-
     // Create and Store the Grid
     for( let i = 0; i < rows; i++ ) {
 
@@ -102,18 +88,6 @@ function createGrid( rows, cols ) {
         for( let j = 0; j < cols; j++ ) {
 
             grid[i][j].addNeighbors();
-
-        }
-
-    }
-
-    // Resize the grid blocks based on DOM size
-    for( let i = 0; i < rows; i++ ) {
-        for(let j = 0; j < cols; j++) {
-
-            let div = document.getElementById(grid[i][j].id);
-            div.style.height = height.toString() + 'px';
-            div.style.width = width.toString() + 'px';
 
         }
 

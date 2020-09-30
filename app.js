@@ -56,6 +56,7 @@ if(w > 567 && w < 760 && h < 420 && h > 319) {
     const divs = document.querySelectorAll('.block');
     divs.forEach(div => {
         div.addEventListener('click', () => {
+            console.log(div);
             let choices = document.getElementsByName('node-choice');
             let nodeChoice = '';
 
