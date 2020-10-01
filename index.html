@@ -17,12 +17,19 @@
         <div class="algos">
 
             <div class="inline-item">
-                <button class="openHelp"><span>Help</span></button>
+                <button class="openHelp"><span class='line helpText'>Help</span></button>
             </div>
+
+            <div class='inline-item'><span class='line'>|</span></div>
+
 
             <div class="inline-item">
                 <button class="reset btn"><span>Reset</span></button>
             </div>
+
+            <div class='inline-item'><span class='line'>|</span></div>
+
+            <div class='inline-item'><span class='line'>Optional:</span></div>
 
             <div class="dropdown">
                 <button class="heuristic dropbtn">Heuristic</button>
@@ -39,6 +46,12 @@
 
                 </div>
             </div>
+
+            
+
+            <div class='inline-item'><span class='line'>|</span></div>
+
+            <div class='inline-item'><span class='line'>Click to Run Algo:</span></div>
 
             <div class="inline-item">
                 <button class="aStar btn">A Star</button>
@@ -57,19 +70,21 @@
 
         <div class="div-row">
 
+            <div class="inline-item heartbeat">SETUP BOARD FIRST: </div>
+
             <div class="inline-item noborder">
                 <input type="radio" id="start" name="node-choice" value="applyStart">
-                <div class="inline-item display-item-start white">Start</div>
+                <div class="inline-item display-item-start white">Starting Position</div>
             </div>
 
             <div class='inline-item noborder'>
                 <input type="radio" id="end" name="node-choice" value="applyEnd">
-                <div class="inline-item display-item-end white">End</div>
+                <div class="inline-item display-item-end white">Destination Position</div>
             </div>
 
             <div class="inline-item noborder">
                 <input type="radio" id="barrier" name="node-choice" value="applyBarrier">
-                <div class="inline-item display-item-barrier white">Wall</div>
+                <div class="inline-item display-item-barrier white">Barrier(s)</div>
             </div>
 
             <div class="inline-item display-item-evaluated black">

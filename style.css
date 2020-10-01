@@ -47,6 +47,15 @@ h2, h3 {
     font-size: 110%;
 }
 
+.line {
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.helpText {
+    text-transform: uppercase;
+}
+
 .help {
     color: gainsboro;
     width: 80%;
@@ -98,7 +107,7 @@ h2, h3 {
     color: white;
     cursor: pointer;
     transition: .6s;
-    padding: 20px;
+    padding: 8px;
 }
 
 .openHelp:hover {
@@ -106,18 +115,95 @@ h2, h3 {
     color: orangered;
 }
 
+.heartbeat {
+    background-color: #1d1d1d;
+	-webkit-animation: heartbeat 1.5s ease-in-out 3 both;
+	        animation: heartbeat 1.5s ease-in-out 3 both;
+}
+
+@-webkit-keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  @keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  
+
 /************************/
 /*     Info Section     */
 /************************/
 
 .info {
-    background:#81b078;  /* fallback for old browsers */
+    background:#102d2f;  /* fallback for old browsers */
     padding: 2vh;
 }
 
 .div-row {
     width: 70%;
-    margin-left: 30%;
+    margin-left: 15%;
+    text-align: center;
 }
 
 .inline-item {
@@ -156,8 +242,10 @@ h2, h3 {
 }
 
 .algos {
-    margin-left: 20%;
-    margin-bottom: 1%;
+    width: 94%;
+    margin: auto;
+    padding-bottom: 20px;
+    text-align: center;
 }
 
 .noborder {
@@ -291,7 +379,7 @@ h2, h3 {
 .end, .display-item-end {
     background: #ad5389;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to bottom, #822e2e, #eb3333); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
 
@@ -306,14 +394,14 @@ h2, h3 {
     background: #16A085;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #F4D03F, #16A085);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #F4D03F, #16A085); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background-image: radial-gradient(circle, #3bff81, #2c2c2c);
 }
 
 .path, .display-item-path {
     background: #00F260;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background: linear-gradient(to bottom, #0575E6, #00f2f2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
 }
 
 @media only screen and (max-width: 360px) {
